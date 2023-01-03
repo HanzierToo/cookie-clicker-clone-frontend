@@ -7,7 +7,6 @@ import Game from "./components/game"
 const View = () => {
     return (
         <div className="container">
-            <Navbar />
             <Game />
         </div>
     );

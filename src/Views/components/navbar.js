@@ -9,6 +9,7 @@ import SaveIcon from '@mui/icons-material/Save';
 import PublishIcon from '@mui/icons-material/Publish';
 import Tooltip from '@mui/material/Tooltip';
 import {createTheme, ThemeProvider} from "@mui/material";
+import HandleLoad from "../../Hooks/HandleLoad"
 
 const darkTheme = createTheme({
     palette: {
@@ -40,29 +41,27 @@ export default function Navbar() {
                             Cookie Clicker Clone
                         </Typography>
                         <Tooltip title="Save Game" placement="left" arrow>
-                            <a href="temp_save.json" download style={{color: "inherit"}}>
-                                <IconButton
-                                    size="large"
-                                    edge="start"
-                                    color="inherit"
-                                    aria-label="save"
-                                    component="label"
-                                    sx={{ mr: 1.4 }}
-                                >
-                                    <SaveIcon />
-                                </IconButton>
-                            </a>
+                            <IconButton
+                                size="large"
+                                edge="start"
+                                color="inherit"
+                                aria-label="save"
+                                component="label"
+                                sx={{ mr: 1.4 }}
+                                // onClick={}
+                            >
+                                <SaveIcon />
+                            </IconButton>
                         </Tooltip>
                         <Tooltip title="Load Save" placement="left" arrow>
                             <IconButton
                                 size="large"
                                 edge="start"
                                 color="inherit"
-                                aria-label="upload save file"
+                                aria-label="load save"
                                 component="label"
                                 sx={{ mr: -1.4 }}
                             >
-                                <input hidden type="file" />
                                 <PublishIcon />
                             </IconButton>
                         </Tooltip>
